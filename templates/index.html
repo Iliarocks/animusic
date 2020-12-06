@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animusic</title>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+</head>
+<body>
+    <!-- navigation -->
+    <nav>
+
+        <ul>
+            <div class="logo">
+
+            </div>
+
+            <div class="search">
+
+            </div>
+
+            <div class="profile">
+                <!-- will add in profiles in future versions -->
+            </div>
+        </ul>
+
+    </nav>
+
+    <!-- main -->
+    <main> 
+
+        <div class="anime">
+            <!-- javascript will add html -->
+        </div>
+
+        <div class="add-anime">
+            <form>
+                <input type="text" placeholder="en" id="en">
+                <input type="text" placeholder="jap" id="jap">
+                <select id="genres">
+                    <option selected disabled>genre</option>
+                    <option value="shonen">shonen</option>
+                    <option value="isekai">isekai</option>
+                </select>
+                <button type="reset" id="add">add</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        version 1.0
+    </footer>
+
+    <!-- firebase config -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC14XiFk8naG0gkW-ev7YRbxU0FLY8k_yI",
+            authDomain: "animusic-da89e.firebaseapp.com",
+            databaseURL: "https://animusic-da89e.firebaseio.com",
+            projectId: "animusic-da89e",
+            storageBucket: "animusic-da89e.appspot.com",
+            messagingSenderId: "363034068126",
+            appId: "1:363034068126:web:c73a87ff751c2292a1a78f",
+            measurementId: "G-457KQF3VP7"      
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
