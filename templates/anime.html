@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animusic</title>
-    <script defer src="{{ url_for('static', filename='index.js') }}"></script>
+    <title>Animusic | {{ anime }}</title>
+    <script defer src="{{ url_for('static', filename='anime.js') }}"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
 </head>
@@ -32,19 +32,13 @@
     <!-- main -->
     <main> 
 
-        <div class="anime">
+        <div class="songs">
             <!-- javascript will add html -->
         </div>
 
-        <div class="add-anime">
+        <div class="add-song">
             <form>
-                <input type="text" placeholder="en" id="en">
-                <input type="text" placeholder="jap" id="jap">
-                <select id="genres">
-                    <option selected disabled>genre</option>
-                    <option value="shonen">shonen</option>
-                    <option value="isekai">isekai</option>
-                </select>
+                <input type="text" placeholder="spotify" id="spotify">
                 <button type="reset" id="add">add</button>
             </form>
         </div>
@@ -71,6 +65,7 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        anime = '{{ anime }}'
     </script>
 </body>
 </html>
